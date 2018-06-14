@@ -14,11 +14,7 @@ const codes = [
 
 
 function init() {
- 
-  function triggerKeyDown(e) {
-    const keyboardEvent = e.keyboardEvent;
-    document.body.dispatchEvent(keyboardEvent);
-    for(let i = 0; i < codes.length; i++)
-       triggerKeyDown(codes[i])
-  }
+ document.addEventListener('keydown', function(e) {
+   const key = codes[e.keyCode];
+})
 }
